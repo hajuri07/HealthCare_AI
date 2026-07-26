@@ -74,21 +74,16 @@ def build_model(model_name: str, num_classes: int)->nn.Module:
         in_features = model.fc.in_features
         
         
-        model.fc = custom_classifier(in_features=in_features,num_classes=num_classes)
+        model.fc  = custom_classifier(in_features=in_features,num_classes=num_classes)
         
         return model
 
-    
+   
     elif model_name == "convnext":
-        model = models.convnext_tiny(
-            weights=models.ConvNeXt_Tiny_Weights.DEFAULT
-        )
-        
+        model = models.convnext_tiny(weights=models.ConvNeXt_Tiny_Weights.DEFAULT)
         in_features = model.classifier[2].in_features
-        
-        
-        model.fc = custom_classifier(in_features=in_features,num_classes=num_classes)
-        return model
+        model.classifier[2] = nn.Linear(in_features, num_classes)   
+        return model    
 
     else:
         raise ValueError(f"Invalid model name: '{model_name}'")
