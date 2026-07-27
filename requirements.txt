@@ -7,6 +7,6 @@ matplotlib
 seaborn
 mlflow
 grad-cam
-opencv-python
+
 streamlit
 Pillow
