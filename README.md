@@ -163,7 +163,3 @@ mlflow ui
 - [ ] Deployment
 
 ---
-
-## License
-
-MIT (or update to match your intended license).
