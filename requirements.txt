@@ -11,3 +11,4 @@ streamlit
 Pillow
 opencv-python-headless
 matplotlib
+opencv-python-headless
