@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-
+from torchvision import datasets
 project_root = Path.cwd().parent
 sys.path.append(str(project_root))
 
@@ -17,6 +17,8 @@ import mlflow
 import mlflow.pytorch
 from sklearn.utils.class_weight import compute_class_weight
 from pathlib import Path
+
+from src.transfomr_xray import xray_transform
 
 def train_model(model_name , batch_size = 32,epochs = 20,learning_rate = 0.001):
     PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -194,3 +196,50 @@ class EarlyStopping:
                 self.early_stop = True
 
 
+
+
+def train_xray_model(model_name, batch_size=32, epochs=20, learning_rate=0.001):
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+    DEVICE = ("cuda" if torch.cuda.is_available() else "cpu")
+
+    train_dataset = datasets.ImageFolder(str(PROJECT_ROOT / "train"), transform=xray_transform)
+    val_dataset   = datasets.ImageFolder(str(PROJECT_ROOT / "val"), transform=xray_transform)
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader   = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+    model = build_model(model_name=model_name, num_classes=2).to(DEVICE)
+    criterion = torch.nn.CrossEntropyLoss()   # no class_weights needed, data's balanced
+    optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=1e-4)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="min", factor=0.1, patience=2)
+    best_loss = float("inf")
+    early_stopping = EarlyStopping(patience=5)
+
+    mlflow.set_experiment("Xray Fracture Classification")
+    for epoch in range(epochs):
+                train_loss = train_one_epoch(model,train_loader,criterion,optimizer,DEVICE)
+    
+                val_loss, accuracy, macro_f1, weighted_f1 = validate_one_epoch(model,val_loader,criterion,DEVICE)
+                mlflow.log_metric("train_loss", train_loss, step=epoch)
+                mlflow.log_metric("val_loss", val_loss, step=epoch)
+                mlflow.log_metric("accuracy", accuracy, step=epoch)
+                mlflow.log_metric("macro_f1", macro_f1, step=epoch)
+                mlflow.log_metric("weighted_f1", weighted_f1, step=epoch)
+                scheduler.step(val_loss)
+                best_loss = save_best_model(model,val_loss,best_loss)
+                early_stopping(val_loss)
+    
+                print(f"Epoch [{epoch+1}/{epochs}] "
+                  f"Train Loss: {train_loss:.4f} | "
+                  f"Val Loss: {val_loss:.4f} | "
+                  f"Accuracy: {accuracy:.4f} | "
+                  f"Macro F1: {macro_f1:.4f} | "
+                  f"Weighted F1: {weighted_f1:.4f}"
+                    )
+    
+                if early_stopping.early_stop:
+                    print("Early stopping triggered!")
+                    
+                    break
+                mlflow.pytorch.log_model(model, "model", serialization_format="pickle")
+                mlflow.log_artifact("best_model.pth")

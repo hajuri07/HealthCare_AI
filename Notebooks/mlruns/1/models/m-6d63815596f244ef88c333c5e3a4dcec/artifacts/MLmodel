@@ -1,0 +1,23 @@
+artifact_path: file:///c:/Ibrahim/Projects/Healthcare/Pytorch-Skin-Diseases-classification/Notebooks/mlruns/1/models/m-6d63815596f244ef88c333c5e3a4dcec/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.10.20
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.11.0+cu128
+mlflow_version: 3.14.0
+model_id: m-6d63815596f244ef88c333c5e3a4dcec
+model_size_bytes: 17680487
+model_uuid: m-6d63815596f244ef88c333c5e3a4dcec
+prompts: null
+run_id: 0edae5f380c245b589fbf2275cfc05fc
+utc_time_created: '2026-08-14 09:11:35.708730'

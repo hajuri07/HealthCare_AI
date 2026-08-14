@@ -1,2 +1,5 @@
 HAM10000_images/
 HAM10000_metadata.csv
+kaggle.json
+train/
+val/
