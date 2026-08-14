@@ -6,7 +6,6 @@ numpy
 scikit-learn
 matplotlib
 seaborn
-mlflow
 grad-cam
 streamlit
 Pillow
