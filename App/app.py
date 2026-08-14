@@ -1,8 +1,11 @@
 import streamlit as st
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 import torch
 from PIL import Image
 import sys
 from pathlib import Path
+
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(PROJECT_ROOT))
@@ -60,7 +63,7 @@ def run_prediction_ui(checkpoints, class_names, upload_key):
         model = load_model(model_name, checkpoint_path, num_classes=len(class_names))
 
         with st.spinner("Running prediction..."):
-            result = predict_image(model, str(temp_path), DEVICE, model_name=model_name)
+            result = predict_image(model, str(temp_path), DEVICE, model_name=model_name, class_names=class_names)
 
         col1, col2 = st.columns(2)
         with col1:
@@ -103,7 +106,7 @@ if not st.session_state.logged_in:
     st.stop()
 
 # ---- main app ----
-st.set_page_config
+
 col_title, col_badge = st.columns([4, 1])
 with col_title:
     st.title("🩺 MediScan AI")
