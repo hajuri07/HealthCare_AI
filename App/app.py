@@ -64,12 +64,14 @@ def run_prediction_ui(checkpoints, class_names, upload_key):
 
         with st.spinner("Running prediction..."):
             result = predict_image(model, str(temp_path), DEVICE, model_name=model_name, class_names=class_names)
-
         col1, col2 = st.columns(2)
         with col1:
             st.image(image, caption="Uploaded Image", use_container_width=True)
         with col2:
-            st.image(result["heatmap"], caption="Grad-CAM Heatmap", use_container_width=True)
+            if result["heatmap"] is not None:
+                st.image(result["heatmap"], caption="Grad-CAM Heatmap", use_container_width=True)
+            else:
+                st.info("Grad-CAM unavailable in this environment")
 
         st.subheader("Prediction")
         m1, m2 = st.columns(2)
