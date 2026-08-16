@@ -8,7 +8,7 @@ from src.transforms import val_transform
 
 
 def predict_image(model, image_path, device, model_name, class_names):
-
+    print("PREDICT_IMAGE VERSION: NEW WITH CLASS_NAMES")
     model.eval()
 
     image = Image.open(image_path).convert("RGB")
