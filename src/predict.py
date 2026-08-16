@@ -7,20 +7,8 @@ from src.gradcam import generate_gradcam
 from src.transforms import val_transform
 
 
-CLASS_NAMES = [
-    "akiec",
-    "bcc",
-    "bkl",
-    "df",
-    "mel",
-    "nv",
-    "vasc"
-]
+def predict_image(model, image_path, device, model_name, class_names):
 
-
-def predict_image(model, image_path, device,model_name):
-
-    
     model.eval()
 
     image = Image.open(image_path).convert("RGB")
@@ -31,22 +19,18 @@ def predict_image(model, image_path, device,model_name):
     with torch.no_grad():
 
         outputs = model(image_tensor)
-
         probs = torch.softmax(outputs, dim=1)
-
         confidence, pred = torch.max(probs, dim=1)
 
-   
     heatmap = generate_gradcam(
         model,
         image_tensor,
         original,
         model_name
     )
-    
 
     return {
-        "prediction": CLASS_NAMES[pred.item()],
+        "prediction": class_names[pred.item()],
         "confidence": confidence.item(),
         "probabilities": probs.squeeze().cpu().numpy(),
         "heatmap": heatmap
