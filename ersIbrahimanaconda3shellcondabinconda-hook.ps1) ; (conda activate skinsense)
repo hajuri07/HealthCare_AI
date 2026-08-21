@@ -1,0 +1,282 @@
+[33mcommit ad47da995572cac4eae6c0096d86f5ef9956cff5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 21 21:01:59 2026 +0530
+
+    Your clean commit message
+
+[33mcommit f0b06b780e65c320994b601d8a7e9c5ea1d3c4f0[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 21 20:31:32 2026 +0530
+
+    Inital commit bruhhh
+
+[33mcommit f1b593785cca90bd3a409a00434e472deff4bbea[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Sun Aug 16 23:32:17 2026 +0530
+
+    Update app.py
+
+[33mcommit 2ff2ebe821b02cb1fd99920f5ab689d5e8080723[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Sun Aug 16 23:29:30 2026 +0530
+
+    Update predict.py
+
+[33mcommit ea385f9bc6d11328c6498212514887d475641749[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Sun Aug 16 23:19:24 2026 +0530
+
+    Update predict.py
+
+[33mcommit ebb0f49aa2f53ab192e80ad76ae099df38f0f797[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Sun Aug 16 23:17:32 2026 +0530
+
+    Delete src/__pycache__ directory
+
+[33mcommit 4a0ac5fec1ca1ca000d9e881794f35d6deb87e7d[m
+Merge: e16e4d4 f9ce304
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Sun Aug 16 23:12:01 2026 +0530
+
+    Merge branch 'main' of https://github.com/hajuri07/HealthCare_AI
+
+[33mcommit e16e4d4feccbf31ff6af38427d223a576fd2077f[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Sun Aug 16 23:11:36 2026 +0530
+
+    Initial commit
+
+[33mcommit f9ce304b3fc5990720daf73a5ae98e90bfd93407[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:15:11 2026 +0530
+
+    Delete packages.txt
+
+[33mcommit f0479708c45a286d0363829ea389c76db85ac1ab[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:14:55 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 8d76efa0b0cec7edd2bda7ade21e4239ade074b0[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:13:53 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 21b301d7a8f0b202ff2f58ede5d50580e926180f[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:13:35 2026 +0530
+
+    Create packages.txt
+
+[33mcommit 57d4b506438113c23a4cea44f28f4e836748741d[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:11:47 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 521df0f4894660857137826674171e57c2ef8fb7[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:10:43 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 79bc31046bf3be68523f19cca1c3becd8ee62bad[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:10:13 2026 +0530
+
+    Delete packages.txt
+
+[33mcommit 2886e5a8f2590b362e67af6be8efebd79890e4b8[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:08:37 2026 +0530
+
+    Update packages.txt
+
+[33mcommit 890c1ef0819262091807dad5bed71b06ac552c3b[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:03:57 2026 +0530
+
+    Update packages.txt
+
+[33mcommit afbb2bc74ab325153a186b2c1e492df422c3eeb8[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:00:59 2026 +0530
+
+    Delete App/packages.txt
+
+[33mcommit 14bf097e41c7bddc3954c47f54af2b3983900b93[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 18:00:47 2026 +0530
+
+    Create packages.txt
+
+[33mcommit c85ce1f2aa61a72d7494f56c6b48d943852bb15f[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:59:20 2026 +0530
+
+    Create packages.txt
+
+[33mcommit afd6ea85407e70d19fd02de0fba5ee7045c0cdaa[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:59:01 2026 +0530
+
+    Delete packages.txt
+
+[33mcommit 413b2cdd8aa39e949bf35d3dc6c14549f5845e21[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:58:05 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 666be2b962b16734f8f0a09631e28355001e9a0a[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:55:17 2026 +0530
+
+    Added Dev Container Folder
+
+[33mcommit 2cdaefa0a92870ece661b160cb9ed5f93f5579f6[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:53:29 2026 +0530
+
+    Update packages.txt
+
+[33mcommit 1da8e417891f73734c3834fd0a302b54e82fd259[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:52:40 2026 +0530
+
+    Create packages.txt
+
+[33mcommit 006e147e949a506c02ba2733b961f741f0b73ed8[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:46:13 2026 +0530
+
+    initial commit
+
+[33mcommit 3722e35dab2d0256bc0eaba7a9e6f47a701c8961[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 17:29:31 2026 +0530
+
+    initial commit
+
+[33mcommit 496af08b000bdba708312e841893016c3ae94724[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:12:40 2026 +0530
+
+    Update packages.txt
+
+[33mcommit 21980158d71787d4c265ace5faac7fb0c448bebf[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:11:29 2026 +0530
+
+    Update packages.txt
+
+[33mcommit c5c5e800facff1ce76c4065f7a6068f184ac99c4[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:08:59 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit cce5d5cf1e2acd738c85adde6e59cf49e1a21ccc[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:08:50 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit ffbeb26ae4c5b965013b04d5e2f63beda60adda0[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:08:14 2026 +0530
+
+    Update packages.txt
+
+[33mcommit 36075b323461d697deb12bac7c56d1ba542288ca[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:07:39 2026 +0530
+
+    Create packages.txt
+
+[33mcommit 2e57433379497ecadc9cdda120aa56441a4b55a4[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:03:29 2026 +0530
+
+    Update gradcam.py
+
+[33mcommit 88154b08afa4c236607497f37d402cf0d9274980[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Fri Aug 14 00:02:53 2026 +0530
+
+    Update predict.py
+
+[33mcommit b3025d485171887ee73d92c57c3fa6b3c4c3f47c[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Wed Aug 5 15:42:41 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 353a0a2d1d1c31fb037172ee0d1a103fd0f6c565[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 15:15:50 2026 +0530
+
+    Add files via upload
+
+[33mcommit b584056064ba0573bb559f56e00315629f8d69b9[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:21:23 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 756ef9c3fbd04938acc4372167a22f82be75843e[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:19:42 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 9af981b7234e939bf2c655d1f0f9497081564517[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:19:00 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 9ee12720cbf87340f5eed49b353682442cf9005e[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:17:37 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 801c1bc8248dabcef969bedceeeecb00718904e8[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:16:35 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 6fabea1a9fa0b0d39ca8bb086061fa8e33d6b518[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:14:19 2026 +0530
+
+    Update requirements.txt
+
+[33mcommit 4c0d176be75a4e56d737b7b5656a26fdce9d68e0[m
+Author: Ibrahim Hajuri <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:12:25 2026 +0530
+
+    Update README.md
+
+[33mcommit f406409e24093a3513f8364cd2dbf4b115bb66f8[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Mon Jul 27 14:10:07 2026 +0530
+
+    Readme updated
+
+[33mcommit 066535c61ce20048a085e3ac39f285811df631bc[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Sun Jul 26 19:10:16 2026 +0530
+
+    Initial Commit
+
+[33mcommit c302b821d814d154279735df993a2422a9319343[m
+Author: hajuri07 <ibrahimhajuri07@gmail.com>
+Date:   Sun Jul 26 18:53:40 2026 +0530
+
+    Inittial Co
