@@ -1,6 +1,12 @@
 from groq import Groq
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+root_dir = Path(__file__).resolve().parent.parent
+dotenv_path = root_dir / ".env"
+load_dotenv(dotenv_path=dotenv_path)
 
-client = Groq(api_key="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")
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def generate_summary (prediction : str, confidence : float,  triage_message : str)->str:
     prompt = f"""You are a medical triage assistant. A skin lesion image was analyzed
