@@ -1,7 +1,52 @@
+# ==== Secrets — critical ====
+.env
+*.env
+!.env.example
+
+# ==== Python (inside App/) ====
+App/__pycache__/
+App/*.py[cod]
+App/*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+
+# ==== ML artifacts — large/binary, don't belong in git ====
+*.pth
+*.pt
+*.ckpt
+mlflow.db
+mlruns/
+
+# ==== Datasets — large, shouldn't be pushed ====
 HAM10000_images/
-HAM10000_metadata.csv
-kaggle.json
+HAM10000_images_part_1/
+HAM10000_images_part_2/
 train/
 val/
-ISBI2016_ISIC_Part1_Training_GroundTruth.zip
-/.env
+test/
+*.csv
+!requirements.txt
+
+# ==== Conda / env leftovers ====
+erslbrahimanaconda3shellcondabinconda-hook.p*
+*.condarc
+
+# ==== Flutter / Dart (root-level project) ====
+build/
+.dart_tool/
+.widget_preview/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+ios/
+android/.gradle/
+android/local.properties
+
+# ==== IDE ====
+.vscode/
+.idea/
+*.iml
+
+# ==== OS ====
+.DS_Store
+Thumbs.db

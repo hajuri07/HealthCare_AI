@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import '../services/api_service.dart';
 
 class SkinAnalysisScreen extends StatefulWidget {
@@ -11,14 +12,14 @@ class SkinAnalysisScreen extends StatefulWidget {
 }
 
 class _SkinAnalysisScreenState extends State<SkinAnalysisScreen> {
-  File? _image;
+  XFile? _image;
   bool _loading = false;
   Map<String, dynamic>? _result;
 
   Future<void> _pickImage(ImageSource source) async {
     final picked = await ImagePicker().pickImage(source: source);
     if (picked == null) return;
-    setState(() { _image = File(picked.path); _result = null; });
+    setState(() { _image = picked; _result = null; });
     _predict();
   }
 
@@ -34,6 +35,14 @@ class _SkinAnalysisScreenState extends State<SkinAnalysisScreen> {
     }
   }
 
+  Widget _buildImagePreview() {
+    if (kIsWeb) {
+      return Image.network(_image!.path, height: 220, fit: BoxFit.cover);
+    } else {
+      return Image.file(File(_image!.path), height: 220, fit: BoxFit.cover);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +52,7 @@ class _SkinAnalysisScreenState extends State<SkinAnalysisScreen> {
         child: Column(
           children: [
             if (_image != null)
-              ClipRRect(borderRadius: BorderRadius.circular(12),
-                child: Image.file(_image!, height: 220, fit: BoxFit.cover)),
+              ClipRRect(borderRadius: BorderRadius.circular(12), child: _buildImagePreview()),
             const SizedBox(height: 16),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton.icon(onPressed: () => _pickImage(ImageSource.camera),
